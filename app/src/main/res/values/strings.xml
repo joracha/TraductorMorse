@@ -6,5 +6,5 @@
     <string name="line">-</string>
     <string name="codigo_morse">C O D I G O M O R S E</string>
     <string name="destino">D E S T I N O</string>
-    <string name="authenticationmsg">FINGER PRINT AUTHENTICATION</string>
+    <string name="authenticationmsg">AUTENTICACIÓN DE HUELLA DIGITAL</string>
 </resources>

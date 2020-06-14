@@ -91,12 +91,14 @@ public class MainActivity extends AppCompatActivity implements SensorEventListen
     @Override
     public void onSensorChanged(SensorEvent event) {
         if (event.sensor.getType() == Sensor.TYPE_PROXIMITY) {
-            if (event.values[0] < PUNTO_DE_TRADUCCION && ultimaMedicion != event.values[0] && esTextEnMorse) {
-                codigoMorse.setText(this.morseCode.morseToAlpha(codigoMorse.getText().toString().trim()));
-                esTextEnMorse = false;
-            } else if (event.values[0] >= PUNTO_DE_TRADUCCION && ultimaMedicion != event.values[0] && !esTextEnMorse) {
-                codigoMorse.setText(this.morseCode.alphaToMorse(codigoMorse.getText().toString()));
-                esTextEnMorse = true;
+            if(ultimaMedicion != event.values[0] && codigoMorse.getText().toString().length() > 0) {
+                if (event.values[0] < PUNTO_DE_TRADUCCION && esTextEnMorse) {
+                    codigoMorse.setText(this.morseCode.morseToAlpha(codigoMorse.getText().toString().trim()));
+                    esTextEnMorse = false;
+                } else if (event.values[0] >= PUNTO_DE_TRADUCCION && !esTextEnMorse) {
+                    codigoMorse.setText(this.morseCode.alphaToMorse(codigoMorse.getText().toString()));
+                    esTextEnMorse = true;
+                }
             }
             ultimaMedicion = event.values[0];
         }

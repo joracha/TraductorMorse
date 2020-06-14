@@ -75,7 +75,6 @@ public class AuthenticationActivity extends AppCompatActivity {
         FingerprintManager.CryptoObject cryptoObject = new FingerprintManager.CryptoObject(cipher);
         CancellationSignal cancellationSignal = new CancellationSignal();
         fingerprintManager.authenticate(cryptoObject, cancellationSignal, 0, new AuthenticationResult(getApplicationContext()), null);
-
     }
 
     private void showError(int id, String e){
