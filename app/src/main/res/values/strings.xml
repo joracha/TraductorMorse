@@ -1,0 +1,10 @@
+<resources>
+    <string name="app_name">TraductorCodigoMorse</string>
+    <string name="enviar">E n v i a r</string>
+    <string name="espacio">E S P A C I O</string>
+    <string name="dot">•</string>
+    <string name="line">-</string>
+    <string name="codigo_morse">C O D I G O M O R S E</string>
+    <string name="destino">D E S T I N O</string>
+    <string name="authenticationmsg">FINGER PRINT AUTHENTICATION</string>
+</resources>
